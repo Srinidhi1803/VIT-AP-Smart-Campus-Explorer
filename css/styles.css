@@ -283,3 +283,18 @@ body {
 .sidebar {
   background: #fafafa;
 }
+
+.gmaps-btn {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 8px 12px;
+  background: black;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.gmaps-btn:hover {
+  opacity: 0.85;
+}

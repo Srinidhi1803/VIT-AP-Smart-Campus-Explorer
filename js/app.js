@@ -89,7 +89,6 @@ function renderList() {
     listEl.appendChild(card);
   });
 
-
   plotMarkers(filtered);
 }
 
@@ -111,6 +110,14 @@ function openDrawer(loc) {
       </div>
 
       <p class="drawer-desc">${loc.short}</p>
+
+      <a 
+        class="gmaps-btn"
+        target="_blank"
+        href="https://www.google.com/maps?q=${loc.lat},${loc.lng}"
+      >
+        Open in Google Maps
+      </a>
 
       <div class="section">
         <h4>Highlights</h4>
