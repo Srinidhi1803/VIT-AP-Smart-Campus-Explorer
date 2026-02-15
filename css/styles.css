@@ -1,0 +1,285 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f4f6f8;
+  color: #222;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+.header {
+  height: 64px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  flex-shrink: 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand img {
+  height: 36px;
+}
+
+.brand h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ===== CONTROLS ===== */
+.controls {
+  background: white;
+  padding: 12px 20px;
+  display: flex;
+  gap: 12px;
+  border-bottom: 1px solid #ddd;
+  flex-shrink: 0;
+}
+
+.controls input,
+.controls select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  min-width: 200px;
+}
+
+.controls button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #111;
+  color: white;
+}
+
+/* ===== MAIN ===== */
+.main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  overflow: hidden;
+}
+
+/* ===== LIST PANEL ===== */
+.list-panel {
+  background: #ffffff;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+  padding: 12px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ===== CARD ===== */
+.card {
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  padding: 14px;
+  transition: all 0.2s ease;
+  background: white;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.card p {
+  font-size: 13px;
+  color: #555;
+}
+
+/* ===== MAP ===== */
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+/* ===== DRAWER ===== */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -420px;
+  width: 420px;
+  height: 100%;
+  background: white;
+  border-left: 1px solid #ddd;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.drawer.open {
+  right: 0;
+}
+
+#closeDrawer {
+  align-self: flex-end;
+  margin: 12px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#drawerContent {
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  height: 40px;
+  background: white;
+  border-top: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+
+  .list-panel {
+    height: 40%;
+  }
+
+  .map {
+    height: 60%;
+  }
+}
+
+.card.active {
+  border: 2px solid black;
+  background: #f0f0f0;
+}
+
+.fav-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* ===== DRAWER MODERN ===== */
+.drawer-hero {
+  height: 200px;
+  overflow: hidden;
+}
+
+.drawer-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 80%;
+}
+
+.drawer-body {
+  padding: 18px;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.drawer-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.badge {
+  background: black;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.drawer-desc {
+  margin: 12px 0 16px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.section {
+  margin-top: 16px;
+}
+
+.section h4 {
+  margin-bottom: 8px;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 4px;
+}
+
+.section ul {
+  padding-left: 18px;
+  color: #444;
+  font-size: 14px;
+}
+
+.section li {
+  margin-bottom: 6px;
+}
+
+.topbar {
+  height: 64px;
+  padding: 0 24px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  background: white;
+}
+
+.logo {
+  height: 42px;
+  margin-right: 12px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.sidebar {
+  background: #fafafa;
+}

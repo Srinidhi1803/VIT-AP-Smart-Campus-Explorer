@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VIT-AP Smart Campus Explorer</title>
+
+  <!-- Leaflet -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet/dist/leaflet.css"
+  />
+
+  <!-- App CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="brand">
+      <img src="assets/vitap-logo.png" alt="VIT-AP Logo" />
+      <h1>Smart Campus Explorer</h1>
+    </div>
+  </header>
+
+  <!-- SEARCH + FILTER -->
+  <section class="controls">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search locations..."
+    />
+
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+    </select>
+
+    <button id="favoritesBtn">⭐ Favorites</button>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <!-- LEFT : LIST -->
+    <div class="list-panel">
+      <div id="locationList" class="card-container">
+        <!-- cards injected by JS -->
+      </div>
+    </div>
+
+    <!-- RIGHT : MAP -->
+    <div id="map" class="map"></div>
+
+  </main>
+
+  <!-- DETAIL DRAWER -->
+  <aside id="detailDrawer" class="drawer">
+    <button id="closeDrawer">✕</button>
+    <div id="drawerContent"></div>
+  </aside>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Academic prototype – VIT-AP</p>
+  </footer>
+
+  <!-- Leaflet -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- JS Modules -->
+  <script type="module" src="js/app.js"></script>
+
+</body>
+</html>
