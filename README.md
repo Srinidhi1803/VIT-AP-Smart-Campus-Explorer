@@ -1,106 +1,134 @@
 # 🎓 VIT-AP Smart Campus Explorer
 
-An interactive web application that helps students, visitors, and faculty explore important locations inside VIT-AP University.
+An interactive campus navigation and information web application built as part of a Web Technologies assignment.
 
-This project provides searchable campus places, category filters, map visualization, and detailed information panels.
-
----
-
-## 🚀 Features
-
-- 🔍 Search locations by name  
-- 🗂 Filter by categories (Academic, Residential, Facilities)  
-- ⭐ Save favorite places (stored in browser)  
-- 🗺 Interactive map with markers  
-- 📌 Click marker or card → view details  
-- 🖼 Location image preview  
-- 📖 Highlights & sub-locations  
-- 🎨 Clean modern UI  
+The system helps students, visitors, and faculty quickly discover important locations, view them on a live map, and access contextual details.
 
 ---
 
-## 🧠 What I Learned
+## 🌐 Live Concept
 
-Through this project I practiced:
+Users can:
 
-- Structuring a frontend application  
-- Managing UI state  
-- Modular JavaScript design  
-- Map integration using Leaflet  
-- DOM rendering  
-- Event-driven communication  
-- LocalStorage usage  
-- UI/UX improvements  
-- Debugging real integration issues  
+- Search campus locations  
+- Filter by category  
+- View places on an interactive map  
+- Open detailed information in a side drawer  
+- Save favorite locations  
+- Open any place directly in Google Maps  
 
 ---
 
-## 🏗 Project Structure
+## ✨ Key Features
+
+### 🔍 Smart Search
+Instant filtering by typing the building or place name.
+
+### 🗂 Category Filters
+Browse Academic, Residential, and Facility locations.
+
+### 🗺 Map Integration
+Markers plotted using Leaflet + OpenStreetMap.
+
+### 📌 Bidirectional Interaction
+Click a card → map zooms.  
+Click a marker → details open.
+
+### ⭐ Favorites
+Saved in browser LocalStorage.
+
+### 🖼 Visual Detail Drawer
+Includes image, description, and highlights.
+
+### 🧭 Google Maps Integration
+One-click navigation externally.
+
+---
+
+## 🧠 Learning Outcomes
+
+This project helped practice:
+
+- Modular frontend architecture  
+- Separation of concerns  
+- Dynamic DOM rendering  
+- State management  
+- Event-driven UI  
+- External map libraries  
+- Persistent browser storage  
+- Debugging integration problems  
+- UI/UX refinement  
+
+---
+
+## 🏗 Technical Stack
+
+- HTML5  
+- CSS3  
+- Vanilla JavaScript (ES Modules)  
+- Leaflet.js  
+- OpenStreetMap  
+
+No backend services are used.
+
+---
+
+## 📁 Project Structure
 
 ```
 campus-explorer/
 │
-├── assets/        → images & logo
+├── assets/          # images, logos, placeholders
 ├── css/
 │   └── styles.css
 ├── js/
-│   ├── app.js     → UI & interactions
-│   ├── data.js    → campus data
-│   └── map.js     → Leaflet map logic
+│   ├── app.js       # UI logic & rendering
+│   ├── data.js      # campus dataset
+│   └── map.js       # map initialization & markers
 │
 └── index.html
 ```
 
 ---
 
-## 🗺 Map Technology
+## ⚙ How the Application Works
 
-This application uses **Leaflet.js** with OpenStreetMap tiles for rendering the campus map and markers.
-
-No paid APIs are required.
-
----
-
-## 💡 How It Works
-
-1. Location data is stored in `data.js`.
-2. `app.js` renders the sidebar list.
-3. `map.js` initializes the map.
-4. Selecting a card or marker opens the detail drawer.
-5. Favorites are stored in the browser using LocalStorage.
+1. Locations are defined in `data.js`.
+2. `app.js` builds the sidebar dynamically.
+3. `map.js` renders the map and markers.
+4. User actions dispatch events between modules.
+5. Favorites are stored in LocalStorage.
 
 ---
 
-## 📷 Screens
+## 🎯 Design Goals
 
-- Sidebar list  
-- Live map  
-- Detail drawer  
-- Favorites mode  
+- Simple and intuitive navigation  
+- Minimal clicks to reach information  
+- Clean academic interface  
+- Extendable architecture for future features  
 
 ---
 
-## 🎯 Future Enhancements
+## 🚀 Possible Future Enhancements
 
-If developed further, the system can support:
-
-- Navigation between locations  
+- Turn-by-turn navigation  
 - Distance calculation  
-- Timings & availability  
-- Faculty room mapping  
+- Building floor mapping  
+- Faculty cabin finder  
 - Accessibility routes  
-- Admin updates  
-- Mobile optimization  
+- Admin update panel  
+- Progressive Web App (PWA)
 
 ---
 
 ## 🧑‍💻 Author
 
-Student of VIT-AP University  
-Web Technologies Assignment
+VIT-AP University  
+Web Technologies Coursework
 
 ---
 
 ## ⚠ Disclaimer
 
-This is an academic prototype built for learning purposes and may not reflect official university data.
+This project is a prototype built for educational purposes and may not represent official university systems.
